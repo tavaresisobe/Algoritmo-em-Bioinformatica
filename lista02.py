@@ -1,4 +1,4 @@
-1)
+#1)
 #ph = float(input("Digite o pH da solução: "))
 #if ph < 7:
 #    print("A solução é ácida")
