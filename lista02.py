@@ -26,15 +26,16 @@
 #print ("...fogo!")
 
 #4)
-s1 = '1'
-s2 = '1'
-s3 = '9'
-for i in range(2, 11, 1):
+#s1 = '1'
+#s2 = '1'
+#s3 = '9'
+#for i in range(2, 11, 1):
 #   for n in range (11, 2, -1):
-    print (f"{s1} x 8 + {s2} = {s3}")
-    s1 += str(i)
-    s2 = str(i)
+#    print (f"{s1} x 8 + {s2} = {s3}")
+#    s1 += str(i)
+#    s2 = str(i)
 #    s3 += str(n)
+#    break
 
 #5)
 
