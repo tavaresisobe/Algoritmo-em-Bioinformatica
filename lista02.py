@@ -1,4 +1,4 @@
-#1)
+#1) Funcionando
 #ph = float(input("Digite o pH da solução: "))
 #if ph < 7:
 #    print("A solução é ácida")
@@ -7,7 +7,7 @@
 #elif ph > 7 :
 #    print("A solução é básica")
 
-#2)
+#2) Funcionando
 #s = input("Continuar (s/n)?\n")
 #while True:
 #    if s.lower() == 's':
@@ -19,13 +19,13 @@
 #        print ("Erro...\n")
 #        s = input("Continuar (s/n)?\n")
 
-#3)
+#3) Funcionando
 #print ("Iniciando à contagem...")
 #for i in range(10,-1,-1):
 #    print (i)
 #print ("...fogo!")
 
-#4)
+#4) Not Work
 #s1 = '1'
 #s2 = '1'
 #s3 = '9'
