@@ -50,6 +50,25 @@ print(f"A Média de Temperatura ficou entre {sum(temp)/2}ºC)")
 #4 Faça um Programa que leia 20 números inteiros e armazene-os num lista. Armazene os números pares na lista
 #PAR e os números IMPARES na lista impar. Imprima os três vetores.
 
+#lista = []
+#par = []
+#impar = []
+
+#while True:
+#  n = int(input("Informe um número (zero para sair): "))
+#  if n == 0:
+#    break
+#  else:
+#    lista.append(n)
+
+#for i in lista:
+#  if i % 2 == 0:
+#    par.append(i)
+#  else:
+#    impar.append(i)
+
+#print ("Números pares informados: ", par)
+#print("Números ímpares informados: ", impar)
 
 #5 Faça um Programa que peça as quatro notas de 5 alunos, calcule e armazene numa lista a média de cada
 # aluno, imprima o número de alunos com média maior ou igual a 7.0
