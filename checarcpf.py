@@ -44,3 +44,8 @@ if d2 < 2:
 else
     d2 = 11 - d2
 cpf.append(d2)
+
+for i in cpf:
+    imprime += str(i)
+
+
