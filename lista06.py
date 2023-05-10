@@ -1,5 +1,3 @@
-# Luan Olimpio Claro da Costa
-
 # Algoritmos em Bioinformatica
 # Lista 6 de Exerecicios
 
