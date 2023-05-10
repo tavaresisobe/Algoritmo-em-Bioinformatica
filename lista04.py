@@ -1,75 +1,106 @@
-#1 Faça um Programa que leia uma lista de 10 números reais e mostre-os na ordem inversa.
+# Luan Olimpio Claro da Costa
 
-#list = []
-#for i in range(10):
-#    x = input(f"Digite o {i+1} número(s): ")
-#    list.append(x)
-#print (list[::-1])
+# Algoritmos em Bioinformatica
+# Lista 4 de Exerecicios
 
-#2 Faça um programa que leia duas listas e que gere uma terceira com os elementos das duas primeiras.
+import datetime
 
-#lista_1 = []
-#lista_2 = []
-#lista_aux = []
-#while True:
-#    aux = input("Digite o(s) elemento(s) da primeira lista:\n(press enter para continuar/digite stop para parar)\n")
-#    if aux.upper() == 'STOP':
-#        break
-#    else:
-#        lista_1.append(aux)
-#print ("\n\n")
-#while True:
-#    aux = input("Digite o(s) elemento(s) da segunda lista:\n(press enter para continuar/digite stop para parar)\n")
-#    if aux.upper() == "STOP":
-#        break
-#    else:
-#        lista_1.append(aux)
+def lista4_ex1():
+    nome = input("Nome: ")
+    ra = input("RA: ")
+    media = int(input("Media: "))
 
-#lista_aux = lista_1 + lista_2
-#print (f"A lista gerada foi {lista_aux}")
+    dicionario = {}
+
+    dicionario["Nome"] = nome
+    dicionario["RA"] = ra
+    dicionario["Media"] = media
+
+    for elemento in dicionario:
+        print("" + elemento + ": " + str(dicionario[elemento]))
+
+    if dicionario["Media"] < 6:
+        print("Reprovado!")
+    else:
+        print("Aprovado!")
 
 
+def lista4_ex2():
+    dicionario = {}
+    dicionario["Nome"] = []
+    dicionario["Peso"] = []
+    dicionario["Sexo"] = []
+    dicionario["Altura"] = []
+    dicionario["IMC"] = []
 
-#3 A lista de temperaturas de Mons, na Bélgica, foi armazenada na lista T = [ -10, -8, 0, 1, 2, 5, -2, -4].
-#Faça um programa que imprima a menor e a maior temperatura, assim como a temperatura média.
+    while True:
+        print("Digite o nome ou 'fim' para encerrar")
+        nome = input("Nome: ")
 
-temp = [-10, -8, 0, 1, 2, 5, -2, -4]
-maior = temp[0]
-menor = temp[0]
-for i in len(temp):
-    if (temp[i] < menor):
-        menor = temp[i]
-for i in len(temp):
-    if (temp[i] > maior):
-        maior = temp[i]
-print (f"A Menor temperatura registrada foi {menor}ºC)")
-print (f"A Maior temperatura registrada foi {maior}ºC)")
-print(f"A Média de Temperatura ficou entre {sum(temp)/2}ºC)")
+        if nome == 'fim':
+            break
+
+        sexo = input("Sexo: ")
+        peso = float(input("Peso: "))
+        altura = float(input("Altura: "))
+
+        dicionario["Nome"].append(nome)
+        dicionario["Sexo"].append(sexo)
+        dicionario["Peso"].append(peso)
+        dicionario["Altura"].append(altura)
+        dicionario["IMC"].append(peso/(altura*altura))
+
+    print("Foram cadastradas " + str(len(dicionario["Nome"])) + " pessoas")
+
+    media = 0.0
+
+    for elemento in dicionario["Altura"]:
+        media = media + elemento / len(dicionario["Altura"])
+    print("A media da altura e " + str(media))
+
+    for elemento in dicionario["Peso"]:
+        media = media + elemento / len(dicionario["Peso"])
+    print("A media do peso e " + str(media))
+
+    for elemento in dicionario["IMC"]:
+        media = media + elemento / len(dicionario["IMC"])
+    print("A media de IMC e " + str(media))
 
 
-#4 Faça um Programa que leia 20 números inteiros e armazene-os num lista. Armazene os números pares na lista
-#PAR e os números IMPARES na lista impar. Imprima os três vetores.
+def lista4_ex3():
+    dicionario = {}
+    ano = int(datetime.date.today().year)
 
-#lista = []
-#par = []
-#impar = []
+    dicionario["Nome"] = input("Nome: ")
+    dicionario["Nascimento"] = int(input("Ano de Nascimento: "))
+    dicionario["Carteira"] = int(input("Carteira de trabalho: "))
+    dicionario["Idade"] = ano - dicionario["Nascimento"]
 
-#while True:
-#  n = int(input("Informe um número (zero para sair): "))
-#  if n == 0:
-#    break
-#  else:
-#    lista.append(n)
+    if dicionario["Carteira"] != 0:
+        dicionario["Contratacao"] = int(input("Ano de Contratacao: "))
+        dicionario["Salario"] = float(input("Salario: "))
 
-#for i in lista:
-#  if i % 2 == 0:
-#    par.append(i)
-#  else:
-#    impar.append(i)
+        if ano - dicionario["Contratacao"] >= 35:
+            dicionario["Aposentadoria"] = ano
+            print("Ano da Aposentadoria: ja pode aposentar")
+        else:
+            dicionario["Aposentadoria"] = 35 + dicionario["Contratacao"]
+            print("Ano da Aposentadoria: " + str(dicionario["Aposentadoria"]))
 
-#print ("Números pares informados: ", par)
-#print("Números ímpares informados: ", impar)
+    print("Idade atual: " + str(dicionario["Idade"]))
 
-#5 Faça um Programa que peça as quatro notas de 5 alunos, calcule e armazene numa lista a média de cada
-# aluno, imprima o número de alunos com média maior ou igual a 7.0
 
+def lista4_ex4():
+    dicionario = {}
+
+    dicionario["Nome"] = input("Nome: ")
+    dicionario["Partidas"] = int(input("Partidas jogadas: "))
+    dicionario["Gols"] = []
+    dicionario["Total"] = 0
+
+    for i in range(0, dicionario["Partidas"]):
+        gols = int(input("Gols no jogo n°" + str(i+1) + ": "))
+        dicionario["Gols"].append(gols)
+        dicionario["Total"] = dicionario["Total"] + gols
+
+    print("Total de gols: " + str(dicionario["Total"]))
